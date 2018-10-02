@@ -1,0 +1,69 @@
+\documentclass[
+ a4paper,twocolumn,showpacs,aip,groupedaddress,%
+  eqsecnum,notitlepage,showkeys,cha,longbibliography,10pt
+]{revtex4-1}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsmath,latexsym}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{tikz}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{soul}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+\usepackage{amsmath,amssymb}
+\newcommand*{\citen}[1]{%
+  \begingroup
+    \romannumeral-`\x % remove space at the beginning of \setcitestyle
+    \setcitestyle{numbers}%
+    \cite{#1}%
+  \endgroup   
+}
+
+\usepackage[a4paper,top=1.8cm,bottom=1.8cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[skip=5pt, font=scriptsize, labelfont=bf, justification=raggedright]{caption}
+
+\usepackage{titlesec}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\graphicspath{ {Images/} }
+
+\begin{document}
+
+\title{\LARGE{Quantum Networking using Rydberg atoms}}
+
+\author{Lindsey Keary}
+\affiliation{ 
+Student Number : 17099595, l.keary.17@ucl.ac.uk, University College London
+}
+\date{\today}\ 
+
+
+\input{abstract}
+
+
+\maketitle
+
+% \input{leadpara}
+\tableofcontents
+\input{intro}
+\input{section1}
+\input{section2}
+\input{section3}
+\input{acknowledgements}
+
+
+\bibliographystyle{ieeetr}
+\bibliography{main}
+
+\end{document}
